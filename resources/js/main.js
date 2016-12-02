@@ -41,3 +41,5 @@ window.onload = function () {
 	};
 
 	but I am not doing that because I am not reusing the object buttonClick.
+
+	*/
