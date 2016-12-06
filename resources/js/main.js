@@ -12,6 +12,9 @@ window.onload = function () {
 
 		if(value) addItemTodo(value);
 	});
+
+	// when user clicks remove, then remove the item clicked 
+
 }
 
 
@@ -20,15 +23,17 @@ function addItemTodo(text) {
 	var list = document.getElementById('todo');
 
 	var item = document.createElement('li');
+
 	item.innerText = text;
+
 
 	var buttons = document.createElement('div');
 	buttons.classList.add('buttons');
 
 	var remove = document.createElement('button');
+
 	remove.classList.add('remove');
 	remove.innerHTML = removeSVG;
-
 
 	var complete = document.createElement('button');
 	complete.classList.add('complete');
@@ -38,7 +43,12 @@ function addItemTodo(text) {
 	buttons.appendChild(complete);
 	item.appendChild(buttons);
 
-	list.appendChild(item);
+	// list.appendChild(item);
+	list.insertBefore (item, list.childNodes[0]);
+}
+
+function removeValue() {
+
 }
 
 
