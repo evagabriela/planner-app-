@@ -217,7 +217,7 @@ ul.todo#completed:not(:empty) {
 	padding: 60px 0 0 0;
 }
 
-ul.todo#completed:not(:empty):before {
+ul.todo#completed:not(:empty):before{
 	content: '';
 	width: 150px;
 	height: 1px;
