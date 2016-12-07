@@ -19,7 +19,10 @@ window.onload = function () {
 }
 
 function removeItem() {
-
+	var item = this.parentNode.parentNode;
+	var parent = item.parentNode
+	
+	parent.removeChild(item);
 }
 
 
@@ -39,7 +42,7 @@ function addItemTodo(text) {
 	remove.classList.add('remove');
 	remove.innerHTML = removeSVG;
 
-	// Add event listener for remove 
+	// Add click event for removing item
 
 	remove.addEventListener('click', removeItem);
 
