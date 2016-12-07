@@ -10,10 +10,15 @@ window.onload = function () {
 
 		var value = document.getElementById('item').value;
 
-		if(value) addItemTodo(value);
+		if(value) {
+			addItemTodo(value);
+			document.getElementById('item').value = '';
+		}
 	});
 
-	// when user clicks remove, then remove the item clicked 
+}
+
+function removeItem() {
 
 }
 
@@ -31,9 +36,12 @@ function addItemTodo(text) {
 	buttons.classList.add('buttons');
 
 	var remove = document.createElement('button');
-
 	remove.classList.add('remove');
 	remove.innerHTML = removeSVG;
+
+	// Add event listener for remove 
+
+	remove.addEventListener('click', removeItem);
 
 	var complete = document.createElement('button');
 	complete.classList.add('complete');
@@ -47,9 +55,7 @@ function addItemTodo(text) {
 	list.insertBefore (item, list.childNodes[0]);
 }
 
-function removeValue() {
 
-}
 
 
 
